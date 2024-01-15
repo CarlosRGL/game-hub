@@ -9,9 +9,18 @@ interface Props {
 }
 
 function GameCard({ game }: Props) {
+  console.log(game);
+
   return (
     <Card>
-      <Image src={getCroppedImageUrl(game.background_image)} alt={game.name} />
+      <Image
+        src={
+          game.background_image
+            ? getCroppedImageUrl(game.background_image)
+            : 'https://via.placeholder.com/600x400'
+        }
+        alt={game.name}
+      />
       <CardBody>
         <Heading fontSize="2xl" as="h2">
           {game.name}
