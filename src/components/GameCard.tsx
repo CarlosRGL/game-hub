@@ -9,8 +9,6 @@ interface Props {
 }
 
 function GameCard({ game }: Props) {
-  console.log(game);
-
   return (
     <Card>
       <Image

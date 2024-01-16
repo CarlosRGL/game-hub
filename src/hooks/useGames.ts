@@ -21,8 +21,6 @@ const useGames = (selectedGenre: Genre | null) =>
     {
       params: {
         genres: selectedGenre?.id,
-        ordering: '-metacritic',
-        page_size: 12,
       },
     },
     [selectedGenre?.id]
