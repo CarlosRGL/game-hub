@@ -11,7 +11,7 @@ interface Props {
 
 function GameGrid({ gameQuery }: Props) {
   const { data, loading } = useGames(gameQuery);
-  const skeletons = Array.from({ length: 10 });
+  const skeletons = Array.from({ length: 20 });
   if (loading) {
     return (
       <>
