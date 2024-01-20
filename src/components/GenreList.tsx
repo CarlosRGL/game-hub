@@ -1,7 +1,6 @@
 import {
   Button,
   HStack,
-  Heading,
   Image,
   List,
   ListItem,
