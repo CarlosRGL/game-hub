@@ -17,12 +17,10 @@ interface Props {
 }
 
 function GenreList({ selectedGenre, onSelectGenre }: Props) {
-  const { data, loading } = useGenres();
-  const skeletons = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  ];
+  const { data, isLoading } = useGenres();
+  const skeletons = Array.from({ length: 10 }, (_, i) => i);
 
-  if (loading) {
+  if (isLoading) {
     return (
       <List>
         {skeletons.map((skeleton) => (
